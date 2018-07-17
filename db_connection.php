@@ -1,24 +1,11 @@
 <?php
 
-// Database connection variables
-$host 		= 'localhost'; 
-$dbname 	= '438'; 
-$username 	= 'root'; 
-$password 	= 'foobar';
+    // Database: AWS RDS Credentials
+    $host                   = 'cst438.xxxxxxxxxxx.us-west-2.rds.amazonaws.com:3306';
+    $port                   = '3306';
+    $dbname                 = 'cst438'; 
+    $username               = 'xxxxxxx'; 
+    $password               = 'xxxxxxx';
 
-
-// Establishes database connection: 
-    try {
-
-        $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    }
-
-    catch (Exception $e) {
-        echo "Unable to connect to database"; 
-        exit(); 
-    }
-
-// Shows error when connecting to database: 
-$dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-
+    $conn = mysqli_connect($host, $username, $password); 
 ?>
