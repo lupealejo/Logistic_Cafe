@@ -102,11 +102,11 @@
             <div class="dropdown">
             <button class="dropbtn">Menu</button>
                 <div class="dropdown-content">
-                    <a href="#">Breakfast</a>
-                    <a href="#">Lunch</a>
-                    <a href="#">Dinner</a>
-                    <a href="#">Beverages</a>
-                    <a href="#">Happy Hour</a>
+                    <a href="../Menus/Breakfast.php">Breakfast</a>
+                    <a href="../Menus/Lunch.php">Lunch</a>
+                    <a href="../Menus/Dinner.php">Dinner</a>
+                    <a href="../Menus/Beverages.php">Beverages</a>
+                    <a href="../Menus/HH.php">Happy Hour</a>
                 </div>
              </div>
         </li>
