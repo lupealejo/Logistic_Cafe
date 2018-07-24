@@ -26,7 +26,8 @@
     <div class="container"> 
        <div class="row">
           <div class="col-md-5">
-        <a class="img-responsive logo" href="index.php"><img src="../Images/LGC_Logo.png" /></a>
+              <!-- Home --> 
+              <a class="img-responsive logo" href="http://ec2-54-213-179-65.us-west-2.compute.amazonaws.com"><img src="../Images/LGC_Logo.png" /></a>
           </div>
        </div>
     </div>
