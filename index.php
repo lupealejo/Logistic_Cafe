@@ -34,7 +34,7 @@
 	
 	<body>
 		
-		<img src="Images/Index_Image4.jpg" id='image'>
+		<img src="Images/Index_Image.jpg" id='image'>
         
         <br /> 
         <br /> 

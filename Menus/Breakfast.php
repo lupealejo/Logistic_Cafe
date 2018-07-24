@@ -9,7 +9,7 @@
 
     /* Unit Testing for SQL sample data*/ 
     $sql = "SELECT * FROM menu_items
-            WHERE menu = 'Lunch'";
+            WHERE menu = 'Breakfast'";
     $stmt = $conn -> prepare($sql);
     $stmt -> execute();
 ?>
@@ -34,7 +34,7 @@
 	      <div class="caption">
 	        <h3><?php echo $r['title'] ?></h3>
 	        <p><?php echo $r['description'] ?></p>
-	        <p><a href="addtocart.php?id=<?php echo $r['id']; ?>" class="btn btn-primary" role="button">Add to Cart</a></p>
+	        <p><a href="../PHP/addtocart.php?id=<?php echo $r['id']; ?>" class="btn btn-primary" role="button">Add to Cart</a></p>
 	      </div>
 	    </div>
 	  </div>
@@ -43,4 +43,4 @@
  
 </div>
  
-<?php include('templates/footer.php'); ?>
+<?php include('../templates/footer.php'); ?>
