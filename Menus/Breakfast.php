@@ -9,7 +9,7 @@
 
     /* Unit Testing for SQL sample data*/ 
     $sql = "SELECT * FROM menu_items
-            WHERE menu = 'Lunch'";
+            WHERE menu = 'Breakfast'";
     $stmt = $conn -> prepare($sql);
     $stmt -> execute();
 ?>
