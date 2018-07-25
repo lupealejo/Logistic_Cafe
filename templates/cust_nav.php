@@ -100,45 +100,27 @@
       <ul class="nav navbar-nav">
         <li> 
             <div class="dropdown">
-            <button class="dropbtn">Menu</button>
-                <div class="dropdown-content">
-                    <a href="../Menus/Breakfast.php">Breakfast</a>
-                    <a href="../Menus/Lunch.php">Lunch</a>
-                    <a href="../Menus/Dinner.php">Dinner</a>
-                    <a href="../Menus/Beverages.php">Beverages</a>
-                    <a href="../Menus/HH.php">Happy Hour</a>
-                </div>
-             </div>
-        </li>
-        <li> 
-            <div class="dropdown">
-                <button class="dropbtn">Gallery</button>
+		    <button class="dropbtn"> <a href="../Menus/Breakfast.php"> Breakfast </a> </button>
             </div>
         </li>
         <li> 
             <div class="dropdown">
-            <button class="dropbtn">Services</button>
-                <div class="dropdown-content">
-                    <a href="#">Reservations</a>
-                    <a href="#">Hours</a>
-                    <a href="#">Catering</a>
-                    <a href="#">Delivery</a>
-                </div>
-             </div>
-        </li>
-        <li> 
-            <div class="dropdown">
-                <button class="dropbtn">About Us</button>
-                <div class="dropdown-content">
-                    <a href="#">History</a>
-                    <a href="#">Contact Us</a>
-                </div>
-             </div>
-        </li>
-        <li> 
-            <div class="dropdown">
-                <button class="dropbtn">Location</button>
+		    <button class="dropbtn"> <a href="../Menus/Lunch.php"> Lunch </a></button>
             </div>
+        </li>
+	<li> 
+            <div class="dropdown">
+		    <button class="dropbtn"> <a href="../Menus/Happyhour.php"> Happy Hour </a> </button>
+            </div>
+        </li>
+        <li> 
+            <div class="dropdown">
+            <button class="dropbtn">About Us</button>
+                <div class="dropdown-content">
+                    <a href="../Menus/Reservations.php">Reservations</a>
+		    <a href="../Menus/ContactUs.php">Contact Us</a>
+                </div>
+             </div>
         </li>
       </ul>
       
