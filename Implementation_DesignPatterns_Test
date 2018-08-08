@@ -1,0 +1,195 @@
+
+/*GOOGLE MAP API IMPLEMENTATION*/
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 400PX;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <h3>MAP API</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+
+  var uluru = {lat: 36.652, lng: -121.797};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 10, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAZRMsn7woqFdSN-voJ6GZ0g4F-DPBRNw&callback=initMap">
+    </script>
+  </body>
+</html>
+
+
+/*JAVA DELIVERY COST IMPLIMENTATION*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*DESIGN PATTERNS
+STATE DESIGN PATTERN FOR DELIVERY COST*/
+
+function Order() {
+    this.state = new WaitingForPayment();
+
+    this.nextState = function() {
+        this.state = this.state.next();
+    };
+}
+
+
+function WaitingForPayment() {
+    this.name = 'waitingForPayment';
+    this.next = function() {
+        return new Delivery();
+    };
+}
+
+function Delivery() {
+    this.name = 'delivery';
+    this.next = function() {
+        return new Delivered();
+    };
+}
+
+function Delivered() {
+    this.name = 'delivered';
+    this.next = function() {
+        return this;
+    };
+}
+
+module.exports = Order;
+class OrderStatus {
+    constructor(name, nextStatus) {
+        this.name = name;
+        this.nextStatus = nextStatus;
+    }
+
+    next() {
+        return new this.nextStatus();
+    }
+}
+
+class WaitingForPayment extends OrderStatus {
+    constructor() {
+        super('waitingForPayment', Delivery);
+    }
+}
+
+class Delivery extends OrderStatus {
+    constructor() {
+        super('delivery', Delivered);
+    }
+}
+
+
+class Delivered extends OrderStatus {
+    constructor() {
+        super('delivered', Delivered);
+    }
+}
+
+class Order {
+    constructor() {
+        this.state = new WaitingForPayment();
+    }
+
+    nextState() {
+        this.state = this.state.next();
+    };
+}
+
+export default Order;
+
+
+
+
+/*TEST FOR STATE DESIGN PATTERN */
+
+
+const Order = require('source');
+
+describe('statetests', () => {
+
+    it('sanity', () => {
+        var order = new Order();
+        expect(order.state.name).to.equal('waitingForPayment');
+        order.nextState();
+        expect(order.state.name).to.equal('shipping');
+        order.nextState();
+        expect(order.state.name).to.equal('delivered');
+    });
+
+});
+
+
+import Order from 'source';
+
+describe('tests', () => {
+
+    it('sanity', () => {
+        const order = new Order();
+        expect(order.state.name).to.equal('waitingForPayment');
+        order.nextState();
+        expect(order.state.name).to.equal('shipping');
+        order.nextState();
+        expect(order.state.name).to.equal('delivered');
+    });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
